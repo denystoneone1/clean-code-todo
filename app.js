@@ -40,8 +40,8 @@ const addTask = function () {
   newTaskInput.value = '';
 };
 
-const toggleTaskEditing = function () {
-  const listItem = this.parentNode;
+const toggleTaskEditing = function (event) {
+  const listItem = event.currentTarget.closest('li');
 
   const editInput = listItem.querySelector('input[type=text]');
   const label = listItem.querySelector('label');
@@ -58,15 +58,16 @@ const toggleTaskEditing = function () {
   listItem.classList.toggle('editMode');
 };
 
-const deleteTask = function () {
-  const listItem = this.parentNode;
+const deleteTask = function (event) {
+  const listItem = event.currentTarget.closest('li');
   const taskList = listItem.parentNode;
   taskList.removeChild(listItem);
 };
 
-const toggleTaskCompletion = function () {
-  const listItem = this.parentNode;
-  const targetList = this.checked ? completedList : todoList;
+const toggleTaskCompletion = function (event) {
+  const checkbox = event.currentTarget;
+  const listItem = checkbox.closest('li');
+  const targetList = checkbox.checked ? completedList : todoList;
   targetList.appendChild(listItem);
 };
 
