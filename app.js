@@ -1,5 +1,5 @@
 const newTaskInput = document.getElementById('new-task');
-const addButton = document.querySelector('.task-row-wrapper button');
+const addButton = document.getElementById('add-task-button');
 const todoList = document.getElementById('todo-tasks');
 const completedList = document.getElementById('completed-tasks');
 
