@@ -9,7 +9,7 @@
 
 const newTaskInput = document.getElementById('new-task'); //Add a new task.
 const addButton = document.querySelector('.task-row-wrapper button');
-const todoList = document.getElementById('incompleteTasks'); //ul of #incompleteTasks
+const todoList = document.getElementById('todo-tasks'); //ul of #todo-tasks
 const completedList = document.getElementById('completed-tasks'); //completed-tasks
 
 //New task list item
